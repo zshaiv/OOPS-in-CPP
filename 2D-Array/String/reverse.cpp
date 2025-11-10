@@ -3,23 +3,19 @@
 using namespace std;
 
 int main() {
-    char str[100];
-    int length = 0;
+    char str[200];
+    int count = 0;
 
     cout << "Enter a string: ";
-    cin.getline(str, 100);  // Reads full line (including spaces)
+    cin.getline(str, 200);  // Read a full line (including spaces)
 
-    // Find length of string
-    while (str[length] != '\0') {
-        length++;
+    // Count characters (excluding null terminator)
+    for (int i = 0; str[i] != '\0'; i++) {
+        count++;
     }
 
-    // Display reversed string
-    cout << "Reversed string: ";
-    for (int i = length - 1; i >= 0; i--) {
-        cout << str[i];
-    }
+    cout << "Total number of characters: " << count << endl;
 
-    cout << endl;
     return 0;
 }
+

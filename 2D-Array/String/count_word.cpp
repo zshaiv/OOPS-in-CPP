@@ -1,0 +1,1 @@
+//WAP to input a string and count the words
